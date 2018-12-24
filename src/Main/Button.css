@@ -1,0 +1,60 @@
+.Button_opened {
+	position:relative;
+	width:100px;
+	height:100px;
+	font: 1.5vh/100px 'Roboto', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:rgba(255, 255, 255, 1);
+	text-align:center;
+	background:rgba(40, 127, 165, 0.4);
+	border-radius:50%;
+	cursor: pointer;
+	transition: all 600ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+.Button_opened:hover {
+	background-color: rgba(215, 215, 215, 1);
+	transform: scale(1.5, 1.5);
+	opacity: 0.5;
+}
+.Button_closed:hover {
+	background-color: rgba(15, 15, 15, 1);
+	transform: scale(0.5, 0.5);
+	opacity: 0.5;
+}
+.Button_closed {
+	position:relative;
+	width:100px;
+	height:100px;
+	font:1.5vh/100px 'Roboto', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:white;
+	text-align:center;
+	background-color:rgba(25, 25, 25, 1);
+	border-radius:50%;
+	cursor: pointer;
+	margin-right: 50vmin;
+	align-self: center;
+	transition: all 600ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+@media screen and (max-width: 968px) {
+	.Button_opened:hover {
+		background-color: none;
+		transform: none;
+		opacity: 1;
+	}
+	.Button_closed:hover {
+		transform: none;
+		opacity: 1;
+		transform: none;
+	}
+}
+@media screen and (max-width: 568px) {
+	.Button_opened {
+		width:80px;
+		height:80px;
+		font: 1.5vh/80px 'Roboto', sans-serif;
+		right: 5vmin;
+	}
+}

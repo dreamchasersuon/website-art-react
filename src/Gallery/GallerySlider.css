@@ -1,0 +1,117 @@
+.Gallery-SliderPreview_wrapper {
+	position: absolute;
+	display: flex;
+	background-color: rgba(65, 65, 65, 1);
+	min-height: 13vmin;
+	top: 85vmin;
+	border-radius: 1vh;
+	left: 18vmin;
+	align-items: center;
+	width: 100%;
+	animation-duration:3s;
+	animation-name:slide;
+	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.Gallery-SliderPreview  {
+	position: relative;
+	display: flex;
+	background-color: rgba(115, 115, 115, 0.8);
+	max-width: 110vmin;
+	border-radius: 1vh;
+	box-sizing: border-box;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	align-content: center;
+	margin-left: 5vh;
+}
+
+.item-wrapper {
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	margin: 0 2vh;
+	flex-flow: column;
+	align-items: center;
+	transition: background-color 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.item-wrapper:hover {
+	background-color: rgba(250, 250, 250, 1);
+}
+.gallery-item {
+  opacity: 0.5;
+}
+.gallery-item.active {
+  opacity: 1;
+}
+.transition {
+	transition: all 350ms ease-in-out;
+}
+.feature {
+	 display: flex;
+	 min-width: 40vmin;
+	 max-height: 70vmin;
+	 position: absolute;
+	 top: 20vh;
+	 left: 18vh;
+}
+.featured-item {
+	min-height: 30vmin;
+	min-width: 40vmin;
+}
+
+img {
+	width: 10vmin;
+	height: 10vmin;
+	border: 1px solid;
+	border-radius: 1vmin;
+}
+@-webkit-keyframes slide {
+	from {
+		transform: translateX(100vmin);
+	}
+	to {
+		transform: translateX(0vmin);
+	}
+}
+@media screen and (max-width: 968px) {
+	.Gallery-SliderPreview_wrapper {
+		top: 85vmin;
+		left: 0;
+		margin: 0 5vmin;
+		width: 90vmin;
+	}
+	.Gallery-SliderPreview  {
+		align-self: center;
+		margin: 0 5vmin;
+		padding: 1vmin 0;
+	}
+}
+@media screen and (max-width: 568px) {
+	.Gallery-SliderPreview_wrapper {
+		top: 80vh;
+		margin: 0;
+		width: 100vmin;
+		min-height: 30vmin;
+	}
+	.Gallery-SliderPreview  {
+		min-height: 20vmin;
+	}
+	.item-wrapper {
+		min-width: 20vmin;
+	}
+	img {
+		width: 20vmin;
+		height: 20vmin;
+	}
+	.feature {
+		 min-width: 90vmin;
+		 margin: 0 5vmin;
+		 min-height: 100vmin;
+		 top: 25vh;
+		 left: 0;
+	}
+	.featured-item {
+		min-height: inherit;
+		min-width: inherit;
+	}
+}

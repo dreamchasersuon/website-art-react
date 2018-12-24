@@ -1,0 +1,6 @@
+.Gallery-SocialMedia {
+	margin: 0 1vh;
+	display: flex;
+	flex-flow: column;
+	align-self: center;
+}

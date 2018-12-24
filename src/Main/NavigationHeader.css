@@ -1,0 +1,78 @@
+.MainGroup-Nav {
+	min-width: 100vmin;
+  display: flex;
+	margin-left: 2vh;
+  min-height: 30vmin;
+  justify-content: space-around;
+  flex-flow: column;
+}
+.Nav-AdjustPosition_wrapper {
+  display: flex;
+	flex-flow: row;
+	align-items: center;
+	min-width: 100vmin;
+	justify-content: space-between;
+}
+.InitialsLogo-Name {
+	display: flex;
+	align-items: center;
+	font-size: 5.5vh;
+	color: rgba(45, 45, 45, 1);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	background-color: rgba(78, 178, 78, 1);
+	max-height: 1em;
+	margin: 0;
+	cursor: pointer;
+}
+.InitialsLogo-Surname {
+	display: flex;
+	align-items: center;
+	color: rgba(45, 45, 45, 1);
+	background-color: rgba(78, 178, 78, 1);
+	font-size: 5.5vh;
+	height: 1em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	position: relative;
+	margin: 0;
+	left: 10vmin;
+	width: -moz-fit-content;
+	margin-top: 1%;
+	cursor: pointer;
+}
+.MainSvg {
+	margin: 0 1vmin;
+}
+a {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 968px) {
+	.MainGroup-Nav {
+		min-width: 100vmin;
+	  min-height: 20vmin;
+	}
+	.Nav-AdjustPosition_wrapper {
+		min-width: 50vmin;
+	}
+}
+@media screen and (max-width: 568px) {
+	.MainGroup-Nav {
+		min-height: 40vmin;
+		align-self: flex-start;
+	}
+	.InitialsLogo-Name {
+		font-size: 5vh;
+	}
+	.InitialsLogo-Surname {
+		font-size: 5vh;
+	}
+	.Nav-AdjustPosition_wrapper {
+		align-items: center;
+		max-width: 100vmin;
+	}
+	.MainSvg {
+		width: 6vmin;
+	}
+}
