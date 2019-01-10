@@ -1,6 +1,6 @@
 .Gallery {
-	position:absolute;
-	display:none;
+	position: absolute;
+	display: none;
 	justify-content: space-between;
 	width: 100%;
 	min-height: 20vmin;

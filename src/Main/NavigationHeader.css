@@ -59,6 +59,7 @@ a {
 }
 @media screen and (max-width: 568px) {
 	.MainGroup-Nav {
+		margin-left: 0;
 		min-height: 40vmin;
 		align-self: flex-start;
 	}

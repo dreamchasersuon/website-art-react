@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import './GallerySlider.css';
 import PropTypes from "prop-types";
+import bigUrls from './BigData.js';
+const bUrls = bigUrls;
 
 class GallerySlider extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      src: null
+      src: bUrls[0]
     };
   }
- handleClick(imageUrl) {
-   this.setState({justClicked: imageUrl});
+ handleClick(event) {
+   let check = event.target.src.replace('/small/', '/big/');
+   this.setState( { src: check } );
  }
 
   renderImage(imageUrl) {
     return (
-          <div className="item-wrapper">
-          <img className="gallery-item image-holder r-3-2 transition"
-               src={imageUrl}
+          <div className="Item-Wrapper">
+          <img className="Gallery-Item r-3-2 transition"
+               src={ imageUrl }
                alt="Art"
-               onClick={ this.handleClick}
+               onClick={ this.handleClick }
                />
         </div>
     );
@@ -28,9 +31,9 @@ class GallerySlider extends Component {
   render() {
     return (
       <div>
-        <div className="feature">
-          <img className="featured-item image-holder r-3-2 transition"
-               src={ this.state }
+        <div className="Feature">
+          <img className="Featured-Item r-3-2 transition"
+               src={ this.state.src }
                alt="Art"
                />
       </div>
@@ -46,9 +49,6 @@ class GallerySlider extends Component {
 
 GallerySlider.propTypes = {
   imageUrls: PropTypes.arrayOf(PropTypes.string).isRequired
-};
-GallerySlider.propTypes = {
-  featuredUrls: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default GallerySlider;

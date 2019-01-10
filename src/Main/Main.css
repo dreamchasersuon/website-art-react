@@ -60,6 +60,8 @@
 	}
 	.frontImg {
 		position: fixed;
+		transition: none;
+		right: 0;
 	}
 }
 @media screen and (max-width: 568px) {
@@ -68,6 +70,7 @@
 		min-height: 100%;
 		min-width: 100%;
 		margin-top: 15vmin;
+		overflow-x: hidden;
 	}
 	.BodyDivisor_black {
 		width: 100%;
@@ -84,12 +87,13 @@
 		position: absolute;
 		top: 40vmin;
 		width: 100%;
-		z-index: 99997;
+		left: 0;
 	}
 	.frontImg {
 		position: fixed;
 		width: 50vmin;
 		height: 50vmin;
-		z-index: 99998;
+		top: 83%;
+		transition: none;
 	}
 }

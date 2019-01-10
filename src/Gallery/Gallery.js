@@ -3,9 +3,9 @@ import './Gallery.css';
 import SocialMedia from '../Main/SocialMedia.js';
 import GallerySlider from './GallerySlider.js';
 import '../Main/Button.css';
-import {smallUrls, bigUrls} from './Data.js';
+import smallUrls from './SmallData.js';
 const sUrls = smallUrls;
-const bUrls = bigUrls;
+
 
 class Gallery extends Component {
   handleClick(){
@@ -22,7 +22,7 @@ class Gallery extends Component {
             <SocialMedia />
               <div className="Button_closed" onClick={this.handleClick}>close</div>
             </header>
-          <GallerySlider featuredUrl={bUrls} imageUrls={sUrls} />
+          <GallerySlider imageUrls={sUrls} />
         </aside>
     );
   }
